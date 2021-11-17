@@ -38,7 +38,8 @@ namespace BaseApp
             }
 
         }
-        
+       
+
         // Reflection helps to convert a string to member name 
         private void Reflect(string[] items)
         {   // items[0] -> Name
@@ -55,7 +56,11 @@ namespace BaseApp
                 }
             }
 
+
+
         }
+
+
 
         private bool OpenAndParse()
         {
@@ -80,26 +85,6 @@ namespace BaseApp
                         Reflect(lrvalue);
 
                     }
-
-                    try
-                    {
-                        int myInteger = int.Parse(items[1]);   // Here's your integer.
-                    }
-                    catch
-                    {
-                        //MessageBox.Show("line contains no int");
-                    }
-                    // Now let's find the path.
-                    string path = null;
-                    foreach (string item in items)
-                    {
-                        if (item.StartsWith("item\\") && item.EndsWith(".ddj"))
-                            path = item;
-                    }
-
-                    // At this point, `myInteger` and `path` contain the values we want
-                    // for the current line. We can then store those values or print them,
-                    // or anything else we like.
                 }
 
             }
